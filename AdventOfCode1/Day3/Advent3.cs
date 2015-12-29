@@ -27,7 +27,7 @@ namespace AdventOfCode1
 			public int Y { get; set; }
 		}
 
-		public void readFile()
+		public void ReadFile()
 		{
 			using (StreamReader sr = new StreamReader(@"3.txt"))
 			{
@@ -35,21 +35,21 @@ namespace AdventOfCode1
 				while ((line = sr.ReadLine()) != null)
 				{
 					char[] array = line.ToCharArray();
-					whichSite(array);
+					WhichSite(array);
 				}
-				printPoints();
+				PrintPoints();
 			}
 		}
 
-		public void addPoint(int x, int y)
+		public void AddPoint(int x, int y)
 		{
 			points.Add(new Point(x, y));
 			sum++;
 		}
 
-		public void checkPoint(int x , int y)
+		public void CheckPoint(int x, int y)
 		{
-			Point check = new Point(x,y);
+			Point check = new Point(x, y);
 			foreach (Point point in points)
 			{
 				if (point.Equals(check))
@@ -57,12 +57,12 @@ namespace AdventOfCode1
 					return;
 				}
 			}
-			addPoint(x, y);
+			AddPoint(x, y);
 		}
 
-		public void whichSite(char[] move)
+		public void WhichSite(char[] move)
 		{
-			addPoint(x, y);
+			AddPoint(x, y);
 			foreach (char step in move)
 			{
 				switch (step)
@@ -80,11 +80,11 @@ namespace AdventOfCode1
 						y -= 1;
 						break;
 				}
-				checkPoint(x,y);
+				CheckPoint(x, y);
 			}
 		}
 
-		public void printPoints()
+		public void PrintPoints()
 		{
 			Console.WriteLine(sum);
 		}

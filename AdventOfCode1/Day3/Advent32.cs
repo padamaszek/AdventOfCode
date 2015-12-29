@@ -13,7 +13,6 @@ namespace AdventOfCode1
 {
 	class Advent32
 	{
-
 		List<Point> points = new List<Point>();
 		List<Point> Robopoints = new List<Point>();
 		ArrayList robot = new ArrayList();
@@ -35,7 +34,7 @@ namespace AdventOfCode1
 			public int Y { get; set; }
 		}
 
-		public void readFile()
+		public void ReadFile()
 		{
 			using (StreamReader sr = new StreamReader(@"3.txt"))
 			{
@@ -43,13 +42,13 @@ namespace AdventOfCode1
 				while ((line = sr.ReadLine()) != null)
 				{
 					char[] array = line.ToCharArray();
-					robotOrSanta(array);
+					RobotOrSanta(array);
 				}
-				printPoints();
+				PrintPoints();
 			}
 		}
 
-		public void robotOrSanta(char[] array)
+		public void RobotOrSanta(char[] array)
 		{
 			int len = array.Length;
 			for (int i = 0; i < len; i++)
@@ -63,17 +62,17 @@ namespace AdventOfCode1
 					santa.Add(array[i]);
 				}
 			}
-			whichSite(robot);
-			whichSite(santa);
+			WhichSite(robot);
+			WhichSite(santa);
 		}
 
-		public void addPoint(int x, int y)
+		public void AddPoint(int x, int y)
 		{
 			sum++;
 			points.Add(new Point(x, y));
 		}
 
-		public void checkPoint(int x, int y)
+		public void CheckPoint(int x, int y)
 		{
 			Point check = new Point(x, y);
 			foreach (Point point in points)
@@ -83,14 +82,14 @@ namespace AdventOfCode1
 					return;
 				}
 			}
-			addPoint(x, y);
+			AddPoint(x, y);
 		}
 
-		public void whichSite(ArrayList move)
+		public void WhichSite(ArrayList move)
 		{
 			x = 0;
 			y = 0;
-			checkPoint(x, y);
+			CheckPoint(x, y);
 			foreach (char step in move)
 			{
 				switch (step)
@@ -108,11 +107,11 @@ namespace AdventOfCode1
 						y -= 1;
 						break;
 				}
-				checkPoint(x, y);
+				CheckPoint(x, y);
 			}
 		}
 
-		public void printPoints()
+		public void PrintPoints()
 		{
 			Console.WriteLine(sum);
 		}

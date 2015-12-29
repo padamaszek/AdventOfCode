@@ -9,8 +9,6 @@ namespace AdventOfCode1
 {
 	class Program
 	{
-		
-
 		static void Main(string[] args)
 		{
 			Advent1 adv1 = new Advent1();
@@ -20,12 +18,12 @@ namespace AdventOfCode1
 			Advent5 adv5 = new Advent5();
 			Advent52 adv52 = new Advent52();
 
-			adv1.readFile();
-			adv2.readFile();
-			adv3.readFile();
-			adv32.readFile();
-			adv5.readFile();
-			adv52.readFile();
+			adv1.ReadFile();
+			adv2.ReadFile();
+			adv3.ReadFile();
+			adv32.ReadFile();
+			adv5.ReadFile();
+			adv52.ReadFile();
 
 			Console.ReadKey();
 		}

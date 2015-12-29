@@ -11,7 +11,7 @@ namespace AdventOfCode1
 	{
 		private int sum = 0;
 
-		public void readFile()
+		public void ReadFile()
 		{
 			using (StreamReader sr = new StreamReader(@"5.txt"))
 			{
@@ -19,21 +19,21 @@ namespace AdventOfCode1
 				while ((line = sr.ReadLine()) != null)
 				{
 					char[] array = line.ToCharArray();
-					niceString(array);
+					NiceString(array);
 				}
 				Console.WriteLine(sum);
 			}
 		}
 
-		public void niceString(char[] array)
+		public void NiceString(char[] array)
 		{
-			if (twoLettersTwiceCheck(array) && oneLetterRepeat(array))
+			if (TwoLettersTwiceCheck(array) && OneLetterRepeat(array))
 			{
 				sum++;
 			}
 		}
 
-		public bool twoLettersTwiceCheck(char[] array)
+		public bool TwoLettersTwiceCheck(char[] array)
 		{
 			char[] twoDigs = new char[2];
 			char[] twoDigsNext = new char[2];
@@ -57,7 +57,7 @@ namespace AdventOfCode1
 			return false;
 		}
 
-		public bool oneLetterRepeat(char[] array)
+		public bool OneLetterRepeat(char[] array)
 		{
 			for (int i = 0; i < array.Length - 2; i++)
 			{

@@ -9,7 +9,7 @@ namespace AdventOfCode1
 {
 	class Advent1
 	{
-		public void readFile()
+		public void ReadFile()
 		{
 			using (StreamReader sr = new StreamReader(@"1.txt"))
 			{
@@ -17,12 +17,12 @@ namespace AdventOfCode1
 				while ((line = sr.ReadLine()) != null)
 				{
 					char[] array = line.ToCharArray();
-					whichFloor(array);
+					WhichFloor(array);
 				}
 			}
 		}
 
-		public bool basementFloor(int floor)
+		public bool BasementFloor(int floor)
 		{
 			if (floor == -1)
 			{
@@ -31,7 +31,7 @@ namespace AdventOfCode1
 			return false;
 		}
 
-		public void whichFloor(char[] input)
+		public void WhichFloor(char[] input)
 		{
 			int result = 0;
 			int step = 0;
@@ -42,12 +42,11 @@ namespace AdventOfCode1
 				{
 					result += 1;
 				}
-				else
-					if (dig.Equals(')'))
+				else if (dig.Equals(')'))
 				{
 					result -= 1;
 				}
-				bool floor = basementFloor(result);
+				bool floor = BasementFloor(result);
 				if (floor)
 				{
 					Console.WriteLine(step);

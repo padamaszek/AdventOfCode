@@ -11,7 +11,7 @@ namespace AdventOfCode1
 	{
 		private int sum = 0;
 
-		public void readFile()
+		public void ReadFile()
 		{
 			using (StreamReader sr = new StreamReader(@"C:\Users\Shaq\Documents\5.txt"))
 			{
@@ -19,22 +19,21 @@ namespace AdventOfCode1
 				while ((line = sr.ReadLine()) != null)
 				{
 					char[] array = line.ToCharArray();
-					niceString(array);
+					NiceString(array);
 				}
 				Console.WriteLine(sum);
 			}
 		}
 
-		public void niceString(char[] array)
+		public void NiceString(char[] array)
 		{
-			if (vowelsCheck(array) && doubleCheck(array) && !wrongStringsCheck(array))
+			if (VowelsCheck(array) && DoubleCheck(array) && !WrongStringsCheck(array))
 			{
 				sum++;
 			}
-			
 		}
 
-		public bool vowelsCheck(char[] array)
+		public bool VowelsCheck(char[] array)
 		{
 			int count = 0;
 			char[] vowels = {'a', 'e', 'i', 'o', 'u'};
@@ -53,7 +52,7 @@ namespace AdventOfCode1
 			return false;
 		}
 
-		public bool doubleCheck(char[] array)
+		public bool DoubleCheck(char[] array)
 		{
 			for (int i = 0; i < array.Length - 1; i++)
 			{
@@ -65,7 +64,7 @@ namespace AdventOfCode1
 			return false;
 		}
 
-		public bool wrongStringsCheck(char[] array)
+		public bool WrongStringsCheck(char[] array)
 		{
 			string[] wrongs = {"ab", "cd", "pq", "xy"};
 

@@ -12,32 +12,31 @@ namespace AdventOfCode1
 		int resultOfOne = 0;
 		int sumOfAll = 0;
 
-		public void readFile()
+		public void ReadFile()
 		{
 			using (StreamReader sw = new StreamReader(@"2.txt"))
 			{
 				string line;
-				while ((line= sw.ReadLine()) != null)
+				while ((line = sw.ReadLine()) != null)
 				{
 					string[] splitted = line.Split('x');
-					ribbon(splitted);
+					Ribbon(splitted);
 					//wrap(splitted);
 				}
 				Console.WriteLine(sumOfAll);
 			}
 		}
 
-		void wrap(string[] present)
+		void Wrap(string[] present)
 		{
 			int l = Convert.ToInt32(present[0]);
 			int w = Convert.ToInt32(present[1]);
 			int h = Convert.ToInt32(present[2]);
-			resultOfOne = 2*l*w + 2*w*h + 2*h*l + smallestSide(l, h, w);
+			resultOfOne = 2*l*w + 2*w*h + 2*h*l + SmallestSide(l, h, w);
 			sumOfAll += resultOfOne;
-
 		}
 
-		int smallestSide(int l, int w, int h)
+		int SmallestSide(int l, int w, int h)
 		{
 			int min1;
 			int min2;
@@ -61,12 +60,12 @@ namespace AdventOfCode1
 			return min1 + min1 + min2 + min2;
 		}
 
-		void ribbon(string[] present)
+		void Ribbon(string[] present)
 		{
 			int l = Convert.ToInt32(present[0]);
 			int w = Convert.ToInt32(present[1]);
 			int h = Convert.ToInt32(present[2]);
-			resultOfOne = l*w*h + smallestSide(l, w, h);
+			resultOfOne = l*w*h + SmallestSide(l, w, h);
 			sumOfAll += resultOfOne;
 		}
 	}
