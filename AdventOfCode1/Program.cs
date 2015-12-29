@@ -4,6 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AdventOfCode1.Day1;
+using AdventOfCode1.Day2;
+using AdventOfCode1.Day3;
+using AdventOfCode1.Day5;
+using AdventOfCode1.Day6;
 
 namespace AdventOfCode1
 {
@@ -17,13 +22,15 @@ namespace AdventOfCode1
 			Advent32 adv32 = new Advent32();
 			Advent5 adv5 = new Advent5();
 			Advent52 adv52 = new Advent52();
+			Advent6	adv6 = new Advent6();
 
-			adv1.ReadFile();
-			adv2.ReadFile();
-			adv3.ReadFile();
-			adv32.ReadFile();
-			adv5.ReadFile();
-			adv52.ReadFile();
+			//adv1.ReadFile();
+			//adv2.ReadFile();
+			//adv3.ReadFile();
+			//adv32.ReadFile();
+			//adv5.ReadFile();
+			//adv52.ReadFile();
+			adv6.ReadFile();
 
 			Console.ReadKey();
 		}

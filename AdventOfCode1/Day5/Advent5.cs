@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode1
+namespace AdventOfCode1.Day5
 {
 	class Advent5
 	{
@@ -13,7 +13,7 @@ namespace AdventOfCode1
 
 		public void ReadFile()
 		{
-			using (StreamReader sr = new StreamReader(@"C:\Users\Shaq\Documents\5.txt"))
+			using (StreamReader sr = new StreamReader(@"5.txt"))
 			{
 				string line;
 				while ((line = sr.ReadLine()) != null)
