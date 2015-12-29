@@ -23,6 +23,7 @@ namespace AdventOfCode1
 			Advent5 adv5 = new Advent5();
 			Advent52 adv52 = new Advent52();
 			Advent6	adv6 = new Advent6();
+			Advent62 adv62 = new Advent62();
 
 			//adv1.ReadFile();
 			//adv2.ReadFile();
@@ -30,7 +31,8 @@ namespace AdventOfCode1
 			//adv32.ReadFile();
 			//adv5.ReadFile();
 			//adv52.ReadFile();
-			adv6.ReadFile();
+			//adv6.ReadFile();
+			adv62.ReadFile();
 
 			Console.ReadKey();
 		}
