@@ -9,7 +9,6 @@ namespace AdventOfCode1.Day6
 {
 	class Advent62
 	{
-
 		int[,] grid = new int[1000, 1000];
 
 
@@ -99,7 +98,7 @@ namespace AdventOfCode1.Day6
 			{
 				for (int j = secondDimStart; j <= secondDimEnd; j++)
 				{
-						grid[i, j] += 2;
+					grid[i, j] += 2;
 				}
 			}
 		}
